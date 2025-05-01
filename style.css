@@ -15,6 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 15px 30px;
 }
 
@@ -26,6 +27,7 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -48,14 +50,14 @@ nav ul li a:hover {
 /* Hero Section - Styles généraux pour le contenu (texte, padding, etc.) */
 .hero {
   color: lch(98.69% 0.35 17.57);
-  text-align:center;
+  text-align: center;
   padding: 20px 90px;
   margin: 10px;
 }
+
 .hero h1 {
   font-size: 40px;
   margin-bottom: 10px;
- 
 }
 
 .hero p {
@@ -67,30 +69,25 @@ nav ul li a:hover {
   border-radius: 60px;
   box-shadow: 0 4px 10px rgba(68, 68, 68, 0.1);
 }
-/* Hero Section - Style spécifique pour l'image de fond de la page d'accueil */
+
+/* Hero background images */
 .hero-accueil {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
               url('Design sans titre.png') center/cover no-repeat;
 }
-/* Hero Section - Style spécifique pour l'image de fond de la page formations */
 .hero-formations {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
               url('istockphoto-1460846345-612x612.jpg') center/cover no-repeat;
 }
-
-/* Hero Section - Style spécifique pour l'image de fond de la page fevenement */
 .hero-evenement {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
               url('istockphoto-1253083564-612x612.jpg') center/cover no-repeat;
-              
 }
-
-/* Hero Section - Style spécifique pour l'image de fond de la page fevenement */
 .hero-contact {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
               url('istockphoto-1440464285-612x612.jpg') center/cover no-repeat;
-              
 }
+
 /* Sections */
 section {
   padding: 40px 20px;
@@ -127,11 +124,11 @@ form button:hover {
 
 /* Footer */
 footer {
-  background-color: #0a0a23;
-  color: #0a0a23;
+  background-color: #343a40;
+  color: #fff;
   text-align: center;
-  padding: 20px 10px;
-  margin-top: 30px;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 footer .social-links a {
@@ -143,6 +140,7 @@ footer .social-links a {
 footer .social-links a:hover {
   text-decoration: underline;
 }
+
 /* Page Webmaster */
 .webmaster {
   display: flex;
@@ -164,7 +162,7 @@ footer .social-links a:hover {
   padding: 30px;
 }
 
-.webmaster-photo { 
+.webmaster-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -200,11 +198,65 @@ footer .social-links a:hover {
   color: #0056b3;
 }
 
-footer {
-  background-color: #343a40;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 20px 30px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    border-radius: 30px;
+  }
+
+  .webmaster-container {
+    width: 95%;
+  }
+
+  .webmaster-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  form input, form select, form textarea, form button {
+    font-size: 16px;
+  }
+
+  .webmaster-info h1 {
+    font-size: 24px;
+  }
+
+  .webmaster-info p {
+    font-size: 14px;
+  }
 }
 
